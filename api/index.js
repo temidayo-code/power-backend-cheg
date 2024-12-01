@@ -78,14 +78,15 @@ app.post("/send-email", upload.none(), async (req, res) => {
             <h3 style="color: #2d3436; margin-top: 20px;">Additional Information</h3>
             <p><strong>Marital Status:</strong> ${req.body.maritalStatus}</p>
             <p><strong>Occupation:</strong> ${req.body.occupation}</p>
-            <p><strong>ID Type:</strong> ${req.body.idType}</p>
-            <p><strong>ID Number:</strong> ${req.body.idNumber}</p>
-            <p><strong>SSN:</strong> ${req.body.ssn}</p>
+            
           </div>
         </div>
       `,
     };
 
+    // <p><strong>ID Type:</strong> ${req.body.idType}</p>
+    //         <p><strong>ID Number:</strong> ${req.body.idNumber}</p>
+    //         <p><strong>SSN:</strong> ${req.body.ssn}</p>
     // Wait for email to be sent before sending response
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
